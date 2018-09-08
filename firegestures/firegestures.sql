@@ -71,8 +71,11 @@ else
   gBrowser.loadURI(str);','RD');
 INSERT INTO "gesture_mappings" VALUES(2,'Find selection in page','gFindBar.open();
 gFindBar._findField.value = FireGestures.getSelectedText();
+// On The second _find() is done because on the first time searching for the selection
+// the selection itself is found. It is odd that this works and does not search every
+// other term.
 gFindBar._find();
-
+gFindBar._find();
 gFindBar.onFindAgainCommand();
 ','LRD');
 INSERT INTO "gesture_mappings" VALUES(1,'','FireGestures:BFHistoryPopup','wheel-up');
