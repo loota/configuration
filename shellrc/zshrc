@@ -1,0 +1,19 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+unsetopt beep extendedglob
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/heikki/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+PATH=$PATH:~/script
+alias l='ls'
+alias lsl='ls -lahSr'
+alias lst='ls -latr'

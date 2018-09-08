@@ -1,0 +1,1 @@
+./configure --with-zlib --enable-bcmath --with-bz2 --with-curl --enable-ftp --enable-mbstring --with-mysqli --enable-sockets --enable-sqlite-utf8 --enable-zip --with-pear                  
