@@ -16,6 +16,7 @@ emacs
 fluxbox
 alsa-utils
 ifupdown-extra
+wmctrl
 
 # Debian specific
 apt-file

@@ -1,4 +1,4 @@
 #!/bin/sh
 setxkbmap us
 xmodmap ~/.Xmodmap
-#xbindkeys
+xbindkeys
