@@ -17,3 +17,31 @@ PATH=$PATH:~/script
 alias l='ls'
 alias lsl='ls -lahSr'
 alias lst='ls -latr'
+
+function figr {
+    grep --color --exclude-dir=.git --exclude-dir=vendor -ri "$*" .
+}
+function figra {
+    grep --color -ri "$*" .
+}
+function figrc {
+    grep -ri "$*" .
+}
+function invim {
+    $1 | vim -c "set noautochdir" -
+}
+function d {
+    path=''
+    if [ $# -eq 0 ]
+    then
+        dirsToGoDown=1
+    else
+        dirsToGoDown=$1
+    fi
+    for (( i=1; i <= $dirsToGoDown; ++i ))
+    do
+        path=$path"../"
+    done
+    cd $path
+    echo $PWD
+}
