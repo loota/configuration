@@ -19,19 +19,19 @@ alias lsl='ls -lahSr'
 alias lst='ls -latr'
 
 function figr {
-    grep --color --exclude-dir=.git --exclude-dir=vendor -ri "$*" .
+    grep --color --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=vendor -ri "$*" .
+}
+function figrc {
+    grep --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=vendor -ri "$*" .
 }
 function figra {
     grep --color -ri "$*" .
 }
-function figrc {
-    grep -ri "$*" .
-}
 function invim {
-    $1 | vim -c "set noautochdir" -
+    $* | gvim -c "set noautochdir" -
 }
 function d {
-    path=''
+    pathToGoDown=''
     if [ $# -eq 0 ]
     then
         dirsToGoDown=1
@@ -40,8 +40,8 @@ function d {
     fi
     for (( i=1; i <= $dirsToGoDown; ++i ))
     do
-        path=$path"../"
+        pathToGoDown=$pathToGoDown"../"
     done
-    cd $path
+    cd $pathToGoDown
     echo $PWD
 }
