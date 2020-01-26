@@ -1,0 +1,1 @@
+FILE=App.vue ESLINTRULE='object-shorthand:1' sed -n '/<script>/,/<\/script>/p' $FILE | sed -e '/<script>/d' -e '/<\/script>/d' >! /tmp/eslint-beautify.js && ../../node_modules/.bin/eslint --rule $ESLINTRULE --parser-options=ecmaVersion:8 --parser-options=sourceType:module --fix /tmp/eslint-beautify.js && cat /tmp/eslint-beautify.js; rm /tmp/eslint-beautify.js 
