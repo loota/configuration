@@ -13,7 +13,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-PATH=$PATH:~/script
+PATH=$PATH:~/script:~/.rbenv/bin:~/.gem/ruby/2.3.0/bin
 alias l='ls'
 alias lsl='ls -lahSr'
 alias lst='ls -latr'
@@ -45,3 +45,18 @@ function d {
     cd $pathToGoDown
     echo $PWD
 }
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/heikki/.sdkman"
+[[ -s "/home/heikki/.sdkman/bin/sdkman-init.sh" ]] && source "/home/heikki/.sdkman/bin/sdkman-init.sh"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/heikki/progs/google-cloud/google-cloud-sdk/path.zsh.inc' ]; then . '/home/heikki/progs/google-cloud/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/heikki/progs/google-cloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/heikki/progs/google-cloud/google-cloud-sdk/completion.zsh.inc'; fi
+eval "$(rbenv init -)"
+
+export DENO_INSTALL="/home/heikki/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+export PATH="$PATH:/home/heikki/.composer/vendor/bin"
