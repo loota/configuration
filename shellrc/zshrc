@@ -13,7 +13,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-PATH=$PATH:~/script:~/.rbenv/bin:~/.gem/ruby/2.3.0/bin
+PATH=$PATH:~/script:~/bin:~/.rbenv/bin:~/.gem/ruby/2.3.0/bin
 alias l='ls'
 alias lsl='ls -lahSr'
 alias lst='ls -latr'

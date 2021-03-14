@@ -1,6 +1,10 @@
 !remove Lock = Caps_Lock
 !keysym Caps_Lock = Escape
-keycode 135 = Control_R
-add Control = Control_R
-keycode 82 = adiaeresis
-keycode 91 = odiaeresis
+! 135 is menu, I guess?
+!keycode 135 = Control_R
+!add Control = Control_R
+! EeePC, probably?
+!keycode 82 = adiaeresis
+!keycode 91 = odiaeresis
+! Black bastard
+keycode 94 = adiaeresis odiaeresis
